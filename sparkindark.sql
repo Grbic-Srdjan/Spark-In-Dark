@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2021 at 09:13 AM
+-- Generation Time: Feb 27, 2021 at 12:29 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `sparkindark`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `helps`
+--
+
+CREATE TABLE `helps` (
+  `id` int(11) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `usercreatorid` int(12) NOT NULL,
+  `userpickerid` int(12) NOT NULL,
+  `description` varchar(760) NOT NULL,
+  `points` int(3) NOT NULL,
+  `isdone` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `helps`
+--
+
+INSERT INTO `helps` (`id`, `title`, `usercreatorid`, `userpickerid`, `description`, `points`, `isdone`) VALUES
+(3, 'I need help with my math hemowork', 1, 0, 'I do not reall need help with it. \r\nThis is just a test to see will this application work. ', 50, 0),
+(4, 'I need someone to take my trash out', 1, 0, 'This is another test of this application. \r\nPlease work :) :D . ', 89, 0),
+(5, 'I need a someone to help me build this app :) . ', 1, 0, 'This is another test. \r\nAlso, it is a joke. \r\nMe and Danilo can create it on our own. \r\nAnd it was a hell lot of fun, so far. \r\n:) ;) . ', 100, 0);
 
 -- --------------------------------------------------------
 
@@ -48,6 +73,12 @@ INSERT INTO `users` (`userid`, `name`, `lastname`, `email`, `password`) VALUES
 --
 
 --
+-- Indexes for table `helps`
+--
+ALTER TABLE `helps`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -56,6 +87,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `helps`
+--
+ALTER TABLE `helps`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`

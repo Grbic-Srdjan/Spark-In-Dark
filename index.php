@@ -111,6 +111,8 @@
                 $_SESSION['emailadress'] = $EMailAdress;
                 $_SESSION['password'] = $Password;
 
+                $_SESSION['currentlyopen'] = -1; 
+
                 header('Location: dashboard.php');
               }
               else{

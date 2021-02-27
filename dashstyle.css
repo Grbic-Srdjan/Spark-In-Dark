@@ -43,10 +43,10 @@ button{
   border: 0;
   background: none;
   display: block;
-  margin: 20px auto;
+  margin: 9.8px auto;
   text-align: center;
   border: 2px solid #2ecc71;
-  padding: 14px 40px;
+  padding: 7px 20px;
   outline: none;
   color: rgb(10, 20, 30);
   transition: 0.25s;
@@ -86,4 +86,42 @@ button:hover{
   left: 0;
   width: 100%;
   bottom: 4%;
+}
+
+.AddButton{
+  position: absolute;
+  bottom: 3.1489%;
+  right: 2.14%;
+}
+#AddButton:hover{
+  background-color: #404040;
+}
+.Profile{
+  position: absolute;
+  right: 2.4%;
+  top: 15%;
+  width: 124px;
+  height: 45px;
+}
+.MainSector{
+  position: absolute;
+  top: 12%;
+  width: 1454px;
+  height: 844px;
+  left: 14.98%;
+  text-align: center;
+}
+.Search{
+  float: left;
+  position: absolute;
+  left: 14%;
+  top: 4%;
+}
+.SearchButton{
+  float: left;
+  position: absolute;
+  left: 29.8%;
+  top: 12%;
+  width: 150px;
+  height: 55px;
 }
