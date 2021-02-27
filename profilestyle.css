@@ -19,11 +19,11 @@ body{
 
 .LogOut{
   position: absolute;
-  right: 2%;
+  right: 15%;
   bottom: 1.2%;
   color: #ffd269;
   border-color: #ffd269;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 input{
@@ -44,7 +44,6 @@ input{
 }
 
 input:hover{
-  width: 280px;
   border-color: #00FF66;
   color: #00FF66;
 }
@@ -67,5 +66,25 @@ button{
 
 .LogOut:hover{
   background-color: rgb(300, 200, 100);
+  color: rgb(10, 20, 30);
+}
+
+.SideMenu{
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  top: 0%;
+  background: #00181f;
+  width: 250px;
+  height: 100%;
+  text-align: center;
+}
+
+.ChangeButton{
+  font-size: 18px; 
+}
+
+.ChangeButton:hover{
+  background: #3498db;
   color: rgb(10, 20, 30);
 }
