@@ -36,7 +36,15 @@
             }
 
             // ispisati rezultat
-            echo "<h3 class = 'Result'>$Result[1] - Created by <a href = 'otheraccount.php'>$FirstName $LastName</a><button class = 'Help'>I will help you with this. </button></h3>";
+            echo "<form method = 'POST' action = '#'>";
+            echo "<h3 class = 'Result'>$Result[1] - Created by <button name = 'HelpRequestCreator'>$FirstName $LastName</button><button class = 'Help'>I will help you with this. </button></h3>";
+            if(isset($_POST['HelpRequestCreator'])){
+              $_SESSION['otherusername'] = $FirstName;
+              $_SESSION['otheruserlastname'] = $LastName;
+              $_SESSION['otheruserid'] = $Result[2]; 
+              header('Location: otheraccount.php');
+            }
+            echo "</form>";
           }
         }
         else{

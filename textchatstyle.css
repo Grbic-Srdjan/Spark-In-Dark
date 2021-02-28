@@ -1,0 +1,112 @@
+body{
+  background: #24333C;
+}
+
+.ChatTitle{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 9%;
+  background: #05F2DB;
+}
+
+.MainTitle{
+  color: #24333C;
+  text-align: center;
+}
+
+.TextChat{
+  background: #05F2DB;
+  height: 9%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+input{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 550px;
+  outline: none;
+  color: #ffff;
+  border-radius: 24px;
+  transition: 0.25s;
+  background-color: #000000;
+  color: #3498db;
+  font-size: 18px;
+}
+
+input:hover{
+  width: 630px;
+  border-color: #00FF66;
+  color: #00FF66;
+}
+
+button{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 9.8px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 7px 20px;
+  outline: none;
+  color: rgb(10, 20, 30);
+  transition: 0.25s;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+
+button:hover{
+  background: #2ecc71;
+  background-color: #00FF66;
+  color: rgb(10, 20, 30);
+  border-radius: 12%;
+  border-color: #00FF66;
+  border: none;
+}
+
+.MessageInputField{
+  position: absolute;
+  left: 4%;
+  height: 22px;
+  top: 0.1spx;
+}
+
+.MessageInputField:hover{
+  left: 2%;
+  height: 20px;
+}
+
+.SendIt{
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+  height: 55px;
+  width: 189px;
+  border-color: rgb(10, 20, 30);
+  color: rgb(10, 20, 30);
+}
+
+.GoBackToProfile{
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  height: 55px;
+  width: 189px;
+  border-color: rgb(10, 20, 30);
+  color: rgb(10, 20, 30);
+}
+
+.SentMessadge{
+  margin-left: 89%;
+  float: right; 
+}
