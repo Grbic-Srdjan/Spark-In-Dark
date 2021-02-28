@@ -5,6 +5,7 @@
 <html>
   <head>
     <link rel = "stylesheet" href = "homestyle.css">
+    <title>Spark In Dark</title>
   </head>
   <body>
     <header class = "Head">

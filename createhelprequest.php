@@ -5,6 +5,7 @@
 <html>
   <head>
     <link rel = "stylesheet" href = "createhelprequeststyle.css">
+    <title>SparkinDark/Create New Help Request. </title>
   </head>
   <body>
     <header class = "UpHead">

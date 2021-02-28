@@ -14,6 +14,17 @@
     <style>
     </style>
     <link rel = "stylesheet" href = "dashstyle.css">
+    <title>Spark In Dark - Dashboard</title>
+    <style>
+      .SeeNewest{
+        float: left;
+        position: absolute;
+        left: 38%;
+        top: 12%;
+        width: 150px;
+        height: 55px;
+      }
+    </style>
   </head>
   <body>
     <header class = "Head">
@@ -37,6 +48,14 @@
       }
     ?>
     </from>
+    <form method = "POST" action = "#">
+      <button name = "SeeNewest" class = "SeeNewest">See Newest Help Requests. </button>
+      <?php
+        if(isset($_POST['SeeNewest'])) {
+          header('Location: newsthelprequests.php');
+        }
+      ?>
+    </form>
     </header>
     <main>
       <div class = "SideMenu">

@@ -26,13 +26,17 @@
             // Podeliti naslov na reci
 
             // Naci korisnika koji je napravio Help Request
-            $FindUserNameQuery = "SELECT `name` FROM `users` WHERE `userid` = $Result[2]";
-            $FindUserNameQueryResult = mysqli_query($Link, $FindUserNameQuery) or die ("An error happened while trying to find name behind user who created this Help Request. You can not imagine how we are sorry for that. It will be really appriciatable, if you try again later on. ");
-            $FindUserLastNameQuery = "SELECT `lastname` FROM `users` WHERE `userid` = $Result[2]";
-            $FindUserLastNameQueryResult = mysqli_query($Link, $FindUserLastNameQuery) or die ("Ou oU OU OU OU, error happened while trying to pick a last name from user that created this help request. Aaaaaaaaaa. Can you forgive us and try again later on, please? ;) :) . ");
+            $FindUserQuery = "SELECT * FROM `users` WHERE `userid` = $Result[2]";
+            $FindUserQueryResult = mysqli_query($Link, $FindUserQuery) or die ("An error happened while trying to find name behind user who created this Help Request. You can not imagine how we are sorry for that. It will be really appriciatable, if you try again later on. ");
+            $NumberOfRows = $FindUserQueryResult->num_rows;
+            if($NumberOfRows > 0){
+              $OneRow = mysqli_fetch_row($FindUserQueryResult);
+              $FirstName = $OneRow[1];
+              $LastName = $OneRow[2];
+            }
 
             // ispisati rezultat
-            echo "<h3 class = 'Result'>$Result[1] - Created by $FindUserNameQueryResult $FindUserNameQueryResult<button class = 'Help'>I will help you with this. </button></h3>";
+            echo "<h3 class = 'Result'>$Result[1] - Created by <a href = 'otheraccount.php'>$FirstName $LastName</a><button class = 'Help'>I will help you with this. </button></h3>";
           }
         }
         else{
