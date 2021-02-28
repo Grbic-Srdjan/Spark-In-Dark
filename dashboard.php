@@ -31,6 +31,8 @@
     <button style = "color: #00181f; border-color: #00181f; " class = "SearchButton" name = "Searchbutton">Search! </button>
     <?php
       if(isset($_POST['Searchbutton'])){
+        $SearchText = $_POST['SearchInput'];
+        $_SESSION['searchtext'] = $SearchText;
         header('Location: search.php');
       }
     ?>
@@ -40,36 +42,35 @@
       <div class = "SideMenu">
         <h2 style = "text-align: center; color: #05F2DB; ">My Helps</h2>
         <div class = "MyHelps">
-          <button>Help 1</button>
-          <button>Help 2</button>
-          <button>Help 3</button>
-          <button>Help 4</button>
+
         </div>
         <div class = "MyTasks">
           <h2 style = "text-align: center; color: #05F2DB; ">My Tasks</h2>
           <?php
             $ThisUser = $_SESSION['userid'];
-            $TasksQuery = "SELECT * FROM `helps` WHERE 'usercreatorid' = '$ThisUser'-1";
+            $TasksQuery = "SELECT * FROM `helps`";
             $TasksQueryResult = mysqli_query($Link, $TasksQuery) or die ("Ahaaaaaaaaa! There is a error! **** **** We will be glad if you will try again later on. ");
             $FoundedTasks = $TasksQueryResult->num_rows;
 
             if($FoundedTasks > 0){
               while(($FoundedTask = mysqli_fetch_row($TasksQueryResult)) != NULL){
-                echo "<form method = 'POST' action = '#'>";
-                echo "<button name = 'Button'>$FoundedTask[1]</button>";
-                if(isset($_POST['Button'])){
-                    $_SESSION['currentlyopen'] = $FoundedTask[0];
-                    $HelpTitle = $FoundedTask[1];
-                    $HelpDescription = $FoundedTask[4];
-                    $PointsGet = $FoundedTask[5];
+                if($FoundedTask[2] == $_SESSION['userid']){
+                  echo "<form method = 'POST' action = '#'>";
+                  echo "<button name = 'Button'>$FoundedTask[1]</button>";
+                  if(isset($_POST['Button'])){
+                      $_SESSION['currentlyopen'] = $FoundedTask[0];
+                      $HelpTitle = $FoundedTask[1];
+                      $HelpDescription = $FoundedTask[4];
+                      $PointsGet = $FoundedTask[5];
+                  }
+                  echo "</form>";
                 }
-                echo "</form>";
               }
             }
           ?>
         </div>
       </div>
-      <a href = "createhelprequest.php" ><button id = "AddButton"><img class = "AddButton" src = "AddButton.png" alt = "PictureCanNotBeLoaded" width = "98px" height = "98px"></button></a>
+      <a href = "createhelprequest.php" ><img class = "AddButton" src = "AddButton.png" alt = "PictureCanNotBeLoaded" width = "98px" height = "98px"></a>
       <div class = "MainSector">
         <?php
         $TaskToLoad = $_SESSION['currentlyopen'];

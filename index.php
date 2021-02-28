@@ -4,50 +4,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" href = "indexstyle.css">
-    <style>
-    .WhatIsIt{
-      position: absolute;
-      left: 32%;
-      top: 12%;
-      width: 800px;
-      height: 450px;
-      float: left;
-    }
-    .WhatIsItPicture{
-      position: absolute;
-      left: 2.45%;
-      top: 20%;
-      float: left;
-    }
-    .Works{
-      position: absolute;
-      right: 32%;
-      bottom: 1.2%;
-      width: 800px;
-      height: 450px;
-      float: left;
-    }
-    </style>
+    <link rel = "stylesheet" href = "homestyle.css">
   </head>
   <body>
     <header class = "Head">
       <h1 class = "MainTitle">Spark In Dark</h1>
     </header>
     <main>
-      <img class = "WhatIsItPicture" src = "Sparks.png" alt = "PictureCanNotBeLoaded" width = "512px" height = "289px">
       <div class = "WhatIsIt">
-      <h1 class = "MainTitle" style = "color: #05F2DB" >What is Spark In Dark?</h1>
-      <h4 style = "color: #00181f; ">Spark In Dark is a web application that connect people in need of an any kind of help to those good souls in our society, that want to help other in their free time for free 😊.  <br> <br>
+      <h1 style = "color: #05F2DB" >What is Spark In Dark?</h1>
+      <h4 style = "color: #bababa; ">Spark In Dark is a web application that connect people in need of an any kind of help to those good souls in our society, that want to help other in their free time for free 😊.  <br> <br>
           Every user has option to ask for help, which can be anything from simple homework through voice call to something physical in real world. Other users, that want to help, can get in contact and try to resolve his problem and put their effort to do everything in their power to help him! After that, as thanks, helpers can get points for their work. <br>
           If you do not need help, but want to help, we will be glad to have you onboard! Just make an account and then search for your field of expertise or view the newest requests, simply click add and get in contact with those in need. <br> <br>
           Spark In Dark is providing you with text, voice and even video call to give you full online communication, but if problem is bigger than that, you can always meet up in real world! <br> <br>
-          <h2 class = "MainTitle" style = "color: #05F2DB">Those who want to help, people in need, without receiving any credit for their work, are the truly good souls – Srdjan Grbic. </h2>   </h4>
       </div>
       <div class = "Works">
-        <h1 class = "MainTitle" style = "color: #05F2DB" >How it works?</h1>
-        <h4 style = "color: #00181f;">Here is going to be some text. </h4>
+        <h1 style = "color: #05F2DB" >How it works?</h1>
+        <h4 style = "color: #bababa;">1.) Just simply make an account. <br> 2.) Ask for help (Make Help Request) <br> 3.) Search for other Help Requests and Help other people! <br> 4.) Other people will conect with you and try to resolve your problem <br> 5.) That is all!! <br> Now, go ahead and make this world a better place . ;) :) . </h4>
       </div>
+      <h2 class = "OurMoto">Those who want to help, people in need, without receiving any credit for their work, are the truly good souls. </h2>
+      <video autoplay loop muted class = "TitleVideo">
+        <source src = "Chat.mp4" type = "video/mp4">
+      </video>
       <div class = "Register">
         <form method = "POST" action = "#">
             <h3 style = "font-size: 25px; text-align: center; ">Are you ready to help other people?</h3>
@@ -65,8 +43,8 @@
                 $Mail = $_POST['REmail'];
                 $Password = $_POST['RPassword'];
 
-                $Query = "INSERT INTO `users` VALUES (NULL, '$FirsName', '$LastName', '$Mail', '$Password')";
-                $Result = mysqli_query($Link, $Query) or die(mysqli_error());
+                $Query = "INSERT INTO `users` VALUES (NULL, '$FirsName', '$LastName', '$Mail', '$Password', 0)";
+                $Result = mysqli_query($Link, $Query) or die("Unable to create you an account :( . Please try again later on :) . ");
 
                 $Number = mysqli_affected_rows($Link);
                 if($Number > 0) {

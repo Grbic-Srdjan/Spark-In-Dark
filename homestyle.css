@@ -17,7 +17,7 @@ body{
 }
 
 .Register{
-  position: absolute;
+  position: fixed;
   top: 9%;
   right: 0;
   width: 400px;
@@ -74,10 +74,56 @@ button:hover{
 }
 
 .LogIn{
-  position: absolute;
+  position: fixed;
   bottom: 0%;
-  left: 0%;
+  right: 0%;
   width: 400px;
   height: 348px;
   background: #00181f;
+}
+
+.WhatIsIt{
+  position: absolute;
+  left: 4%;
+  text-align: center;
+  top: 112%;
+  width: 1200px;
+  height: 450px;
+  float: left;
+  font-size: 25px;
+}
+.WhatIsItPicture{
+  position: absolute;
+  left: 2.45%;
+  top: 15%;
+  float: left;
+}
+.Works{
+  position: absolute;
+  left: 4%;
+  top: 176%;
+  width: 1200px;
+  height: 450px;
+  float: left;
+  font-size: 25px;
+  text-align: center;
+}
+
+.OurMoto{
+  position: absolute;
+  left: 17.98%;
+  top: 12%;
+  color: #05F2DB;
+  width: 850px;
+  height: 924px;
+  font-size: 50px;
+  color: #05F2DB;
+}
+
+.TitleVideo{
+  position: absolute;
+  top: 25%;
+  left: 9.8%;
+  width: 1000px;
+  height: 1000px;
 }
