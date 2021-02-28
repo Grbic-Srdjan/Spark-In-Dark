@@ -29,7 +29,14 @@
       </div>
     </main>
     <footer>
-      <button name = ""></>
+      <form method = "POST" action = "#">
+        <button name = "GoBack" class = "GoBack">Go Back!</button>
+        <?php
+          if(isset($_POST['GoBack'])){
+            header('Location: search.php'); 
+          }
+        ?>
+      </from>
     </footer>
   </body>
 </html>

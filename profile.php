@@ -8,12 +8,29 @@
   <head>
     <title>SparkInDark/Profile</title>
     <link rel = "stylesheet" href = "profilestyle.css">
+    <style>
+    .YouHelped{
+      position: absolute;
+      left: 4%;
+      top: 12%;
+      color: #05F2DB;
+    }
+
+    .HelpedYou{
+      position: absolute;
+      left: 4%;
+      top: 76%;
+      color: #05F2DB;
+    }
+    </style>
   </head>
   <body>
     <header class = "UpperPartOfProfile">
       <h1 class = "Title">Welcome <?php echo $_SESSION['firstname']?> <?php echo $_SESSION['lastname']?></h1>
     </header>
     <main>
+      <h1 class = "YouHelped">People that you helped: </h1> <br>
+      <h1 class = "HelpedYou">People that helped you: </h1>
     </main>
     <footer class = "SideMenu">
       <form method = "POST" action = "#">

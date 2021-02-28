@@ -61,7 +61,6 @@
       <div class = "SideMenu">
         <h2 style = "text-align: center; color: #05F2DB; ">My Helps</h2>
         <div class = "MyHelps">
-
         </div>
         <div class = "MyTasks">
           <h2 style = "text-align: center; color: #05F2DB; ">My Tasks</h2>

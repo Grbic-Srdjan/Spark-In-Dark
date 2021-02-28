@@ -106,7 +106,12 @@ button:hover{
   color: rgb(10, 20, 30);
 }
 
+.RecievedMessadge{
+  margin-right: 89%;
+  float: left;
+}
+
 .SentMessadge{
   margin-left: 89%;
-  float: right; 
+  float: right;
 }
